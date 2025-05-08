@@ -1,0 +1,9 @@
+{
+	"name": "olympics-adf12",
+	"location": "uaenorth",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b688c523-c751-4849-8d85-99661703f476",
+		"tenantId": "11487d85-36c6-4745-8d71-f505af689676"
+	}
+}
