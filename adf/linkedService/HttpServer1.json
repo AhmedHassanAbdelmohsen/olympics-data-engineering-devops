@@ -3,7 +3,8 @@
 	"properties": {
 		"parameters": {
 			"file_url": {
-				"type": "string"
+				"type": "string",
+				"defaultValue": "@item().url"
 			}
 		},
 		"annotations": [],
