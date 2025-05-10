@@ -1,12 +1,6 @@
 {
 	"name": "source1",
 	"properties": {
-		"parameters": {
-			"file_url": {
-				"type": "string",
-				"defaultValue": "@item().url"
-			}
-		},
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
