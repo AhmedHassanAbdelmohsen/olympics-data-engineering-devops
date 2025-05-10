@@ -1,0 +1,30 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "olympics-adf12"
+		},
+		"jsonsource_accountKey": {
+			"value": ""
+		},
+		"sink_accountKey": {
+			"value": ""
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/"
+		},
+		"jsonsource_properties_typeProperties_url": {
+			"value": "https://olympicsadls2025.dfs.core.windows.net/"
+		},
+		"sink_properties_typeProperties_url": {
+			"value": "https://olympicsadls2025.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
