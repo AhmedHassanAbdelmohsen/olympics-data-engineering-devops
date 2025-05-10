@@ -1,5 +1,5 @@
 {
-	"name": "Parquet1",
+	"name": "sinkdata",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "sink",
