@@ -1,0 +1,19 @@
+{
+	"name": "Parquet2nocs",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "sink",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "bronze"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
