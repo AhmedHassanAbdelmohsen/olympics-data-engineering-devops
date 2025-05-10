@@ -1,21 +1,18 @@
 {
-	"name": "metadatasource",
+	"name": "Parquet2nocs",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "sink",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
-		"type": "DelimitedText",
+		"type": "Parquet",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileSystem": "config"
+				"fileSystem": "bronze"
 			},
-			"columnDelimiter": ",",
-			"escapeChar": "\\",
-			"firstRowAsHeader": true,
-			"quoteChar": "\""
+			"compressionCodec": "snappy"
 		},
 		"schema": []
 	}

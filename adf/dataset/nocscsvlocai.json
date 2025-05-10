@@ -1,5 +1,5 @@
 {
-	"name": "nocsfile",
+	"name": "nocscsvlocai",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "sink",
@@ -10,8 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "nocs",
-				"fileSystem": "bronze"
+				"fileName": "nocs.csv",
+				"fileSystem": "config"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
@@ -20,7 +20,23 @@
 		},
 		"schema": [
 			{
-				"name": "PAR1\u0015\u0000\u0015�\u0018\u0015�\u0010\u0015����\u000b\u001c\u0015�\u0003\u0015\u0000\u0015\u0006\u0015\b\u0000\u0000�\f\u0018\u0003\u0000\u0000\u0000�\u0003\u0001\u0001\u0007\bAFG\u0005\u0007\u0004HO\u0005\u0007\u0004IN\u0005\u0007\u0004LB\t\u0007\t\u001c\u0004ND\u0005\u000e\u0000N",
+				"name": "code",
+				"type": "String"
+			},
+			{
+				"name": "country",
+				"type": "String"
+			},
+			{
+				"name": "country_long",
+				"type": "String"
+			},
+			{
+				"name": "tag",
+				"type": "String"
+			},
+			{
+				"name": "note",
 				"type": "String"
 			}
 		]

@@ -51,14 +51,13 @@
 					},
 					"activities": [
 						{
-							"name": "If Condition1",
-							"description": "",
+							"name": "nocsfilecondition",
 							"type": "IfCondition",
 							"dependsOn": [],
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@equals(item().name, 'NOCs.csv')",
+									"value": "@equals(item().name, 'NOCs.csv')\n\n",
 									"type": "Expression"
 								},
 								"ifTrueActivities": [
@@ -76,7 +75,7 @@
 										"userProperties": [],
 										"typeProperties": {
 											"dataset": {
-												"referenceName": "nocsfile",
+												"referenceName": "nocscsvlocai",
 												"type": "DatasetReference"
 											},
 											"fieldList": [
@@ -99,7 +98,7 @@
 							"type": "IfCondition",
 							"dependsOn": [
 								{
-									"activity": "If Condition1",
+									"activity": "nocsfilecondition",
 									"dependencyConditions": [
 										"Succeeded"
 									]
@@ -113,7 +112,7 @@
 								},
 								"ifTrueActivities": [
 									{
-										"name": "CopyNOCsToBronze",
+										"name": "Copy data1",
 										"type": "Copy",
 										"dependsOn": [],
 										"policy": {
@@ -137,14 +136,12 @@
 												}
 											},
 											"sink": {
-												"type": "DelimitedTextSink",
+												"type": "ParquetSink",
 												"storeSettings": {
 													"type": "AzureBlobFSWriteSettings"
 												},
 												"formatSettings": {
-													"type": "DelimitedTextWriteSettings",
-													"quoteAllText": true,
-													"fileExtension": ".txt"
+													"type": "ParquetWriteSettings"
 												}
 											},
 											"enableStaging": false,
@@ -160,13 +157,13 @@
 										},
 										"inputs": [
 											{
-												"referenceName": "nocsfile",
+												"referenceName": "nocscsvlocai",
 												"type": "DatasetReference"
 											}
 										],
 										"outputs": [
 											{
-												"referenceName": "metadatasource",
+												"referenceName": "Parquet2nocs",
 												"type": "DatasetReference"
 											}
 										]
